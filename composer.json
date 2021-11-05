@@ -1,0 +1,19 @@
+{
+    "name": "edlop/inmobiliaria",
+    "description": "Creand un proyecto en POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Edgar López",
+            "email": "edlopmor@hotmail.es"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\" : "./clases"
+        }
+    }
+}
