@@ -1,6 +1,6 @@
 <?php 
     //Es case sensitive.
-    namespace App;
+    namespace Model;
 
 class ActiveRecord {    
     //Base de datos 

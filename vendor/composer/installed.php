@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'c770f3571c497006a2ebee6f18da269d715b2eea',
         'name' => 'edlop/inmobiliaria',
         'dev' => true,
     ),
     'versions' => array(
         'edlop/inmobiliaria' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'c770f3571c497006a2ebee6f18da269d715b2eea',
             'dev_requirement' => false,
         ),
         'guzzlehttp/psr7' => array(

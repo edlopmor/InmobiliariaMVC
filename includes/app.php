@@ -7,6 +7,6 @@
     //Conectar a la base de datos 
 
     $db = conectarDB();
-    use App\Propiedad;
+    use Model\Propiedad;
 
     Propiedad::setDb($db);
