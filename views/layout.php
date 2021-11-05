@@ -6,7 +6,7 @@
     <title>Inmobiliaria</title>
 
     <!--Hojas de estilo-->
-    <link rel="stylesheet" href="/public/build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
     <!--El metodo isset permite comprobar si una variable existe o no -->
@@ -14,13 +14,13 @@
         <div class="contenedor contenido-header">
             <div class="barraNavegacion">
                 <a class="logo" href="/">
-                    <img src="/public/build/img/logo.svg" alt="LogotipoPrincipal">
+                    <img src="/build/img/logo.svg" alt="LogotipoPrincipal">
                 </a>
                 <div class="mobile-menu">
-                    <img src="/public/build/img/barras.svg" alt="icono menu responsive">
+                    <img src="/build/img/barras.svg" alt="icono menu responsive">
                 </div>
                 <div class="derecha">
-                    <img class="dark-mode-boton" src="/public/build/img/dark-mode.svg" alt="Boton dark-mode">
+                    <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Boton dark-mode">
                     <nav class="navegacion">
                         <a href="/nosotros.php">Nosotros</a>
                         <a href="/anuncios.php">Anuncios</a>
@@ -49,7 +49,7 @@
        </div>
         <p class="copyRight">Todos los derechos reservados <?php echo date('Y') ?> &copy;</p>
     </footer>
-    <script src ="/public/build/js/bundle.min.js"></script> 
+    <script src ="/build/js/bundle.min.js"></script> 
 </body>
 
 </html>

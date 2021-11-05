@@ -1,15 +1,16 @@
 <main class="conteneder seccion">
         <h1>Administrador de bienes raices</h1>
         <?php
-        if($resultado){
+        if($resultado ?? null){
             $mensaje = mostrarNotificacion( intval( $resultado) );
             if($mensaje){ ?>
                 <p class="alerta exito"><?php echo s($mensaje)?></p>            
             <?php }} ?>
         
     </main>
-    <a href="/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a> 
-    <a href="/admin/vendedores/crear.php" class="boton boton-amarillo">Nuevo vendedor</a> 
+    <a href="/propiedades/crear" class="boton boton-verde">Nueva propiedad</a> 
+    <a href="/admin/vendedores/crear.php" class="boton boton-amarillo">Nuevo(a) vendedor</a> 
+    
 <h2>Propiedades</h2>
     <table class="propiedades">
         <thead>
@@ -26,7 +27,7 @@
             <tr>
                 <td><?php echo $propiedad->id; ?></td>
                 <td><?php echo $propiedad->titulo; ?></td>
-                <td><img src="/public/imagenes/<?php echo $propiedad->imagen;?>" alt="Imagen-tabla" class="imagen-tabla"></td>
+                <td><img src="/imagenes/<?php echo $propiedad->imagen;?>" alt="Imagen-tabla" class="imagen-tabla"></td>
                 <td><?php echo $propiedad->precio;?> $</td>
                 <td>
                     <form method="POST" class="w-100" action="">

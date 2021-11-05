@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c770f3571c497006a2ebee6f18da269d715b2eea',
+        'reference' => '727c9df77426333500735a515ec1521c26264d8c',
         'name' => 'edlop/inmobiliaria',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c770f3571c497006a2ebee6f18da269d715b2eea',
+            'reference' => '727c9df77426333500735a515ec1521c26264d8c',
             'dev_requirement' => false,
         ),
         'guzzlehttp/psr7' => array(
