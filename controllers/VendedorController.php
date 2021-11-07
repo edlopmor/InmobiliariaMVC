@@ -42,6 +42,21 @@ class VendedorController{
         ]);
     }
     public static function eliminar(){
-        echo "eliminar";
+        
+        if ($_SERVER['REQUEST_METHOD']==='POST'){
+            
+            //Validad el id 
+            $id = $_POST['id'];
+            $id = filter_var($id,FILTER_VALIDATE_INT);
+            if ($id){
+                $tipo = $_POST['tipo'];
+                if(validarTipoContenido($tipo)){
+                    $vendedor = Vendedor::findXId($id);
+                    $vendedor->eliminar();
+                }
+            }
+            
+            
+        }
     }
 }
