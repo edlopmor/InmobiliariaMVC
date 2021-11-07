@@ -23,8 +23,23 @@ class VendedorController{
             'vendedor'=>$vendedor            
         ]);
     }
-    public static function actualizar($id){
-        echo "actualizar";
+    public static function actualizar(Router $router){
+        $errores = Vendedor::getErrores();
+        $id = validarORedireccionar('/admin');
+        //Obtener datos del vendedor a actualizar
+        $vendedor = Vendedor::findXId($id);
+        if ($_SERVER['REQUEST_METHOD']==='POST'){
+            $args = $_POST['vendedor'];
+
+            $vendedor->sincronizar($args);
+            
+            $errores = $vendedor->validar();
+            if (empty($errores)) $vendedor->actualizar($id);
+        }
+        $router -> render('/vendedores/actualizar',[
+            'errores' => $errores,
+            'vendedor' => $vendedor
+        ]);
     }
     public static function eliminar(){
         echo "eliminar";

@@ -37,7 +37,7 @@
                             <input type="submit" class="boton boton-rojo-block" value="Eliminar">
                         </form>
                         
-                        <a class="boton boton-amarillo-block" href="/propiedades/actualizar?id=<?php echo $propiedad->id; ?>">Actualizar</a>
+                        <a class="boton boton-amarillo-block" href="propiedades/actualizar?id=<?php echo $propiedad->id; ?>">Actualizar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -67,7 +67,7 @@
                             <input type="submit" class="boton boton-rojo-block" value="Eliminar">
                         </form>
                         
-                        <a class="boton boton-amarillo-block" href="/vendedores/actualizar?id=<?php echo $vendedor->id; ?>">Actualizar</a>
+                        <a class="boton boton-amarillo-block" href="vendedores/actualizar?id=<?php echo $vendedor->id; ?>">Actualizar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
