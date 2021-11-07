@@ -13,7 +13,7 @@ class Router {
     
     public function comprobarRutas(){
         $urlActual = $_SERVER['PATH_INFO']??'/';
-    // debugear($urlActual);
+        
         $metodo = $_SERVER['REQUEST_METHOD'];
         if ($metodo === 'GET') {
             //Si no existe le agregamos null.          

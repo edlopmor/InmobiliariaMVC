@@ -17,15 +17,7 @@ class ActiveRecord {
         self::$db = $dataBase;
     }
     //Guardar en la base de datos. Si el id existe actualiza el registro, si no existe lo crea. 
-    public function guardar(){
-        if(!is_null($this->id)){
-            //Actualizar 
-            $this->actualizar();
-        }else{
-            //Crear
-            $this->crear();
-        }
-    }
+    
     public function crear(){
         //Sanear los datos 
         $atributos = $this->sanearDatos();
@@ -35,13 +27,13 @@ class ActiveRecord {
         $query .= " ) VALUES(' " ;
         $query .= join("', '",array_values($atributos));
         $query .= " ')";
-                                  
+                                
         $resultado = self::$db->query($query);
         if($resultado) header("location: /admin? resultado=1");
         
                     
     }
-    public function actualizar(){
+    public function actualizar($id){
         //Siempre que interaccionemos con la base de datos debemos sanear los datos, para evitar injecciones sql. 
         $atributos = $this->sanearDatos();
         $valores = [];
@@ -50,18 +42,17 @@ class ActiveRecord {
         }
         $query = "UPDATE " . static::$tabla ." SET ";
         $query .=  join(', ',$valores);
-        $query .= " WHERE ID = '". self::$db->escape_string($this->id) ."'" ;
-        $query .= " LIMIT 1 ";
-
+        $query .= " WHERE ID="." ${id} ". " LIMIT 1";
+        
         $resultado = self::$db->query($query);
         if($resultado) header("location: /admin? resultado=2");
         
     }
     //Eliminar 
     public function eliminar(){           
-        $query = "DELETE FROM ". static::$tabla ." WHERE ID= " . self::$db->escape_string($this->id) . " LIMIT 1 ";
+        $query = "DELETE FROM ". static::$tabla ." WHERE ID=". self::$db->escape_string($this->id) ." LIMIT 1 ";
+        
         $resultado = self::$db->query($query);
-
         if($resultado){
             header("location: /admin? resultado=3");
             $this->borrarImagen();
