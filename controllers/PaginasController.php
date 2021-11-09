@@ -12,20 +12,19 @@ class PaginasController{
         $inicio = true;
         $router-> render('paginas/index',[
             'propiedades' => $propiedades,
-            'inicio'=>$inicio,
-            //TO DO
-            'auth'=>false
+            'inicio'=>$inicio
+            
         ]);
     }
     public static function nosotros(Router $router){
         $router-> render('paginas/nosotros',[
-            'auth'=>false
+            
         ]);
     }
     public static function propiedades(Router $router){
         $propiedades = Propiedad::getAll();
         $router-> render('paginas/propiedades',[
-            'auth'=>false,
+            
             'propiedades'=>$propiedades
         ]);
     }
@@ -37,18 +36,18 @@ class PaginasController{
         $propiedad = Propiedad::findXId($id);
         
         $router-> render('paginas/propiedad',[
-            'auth'=>false,
+            
             'propiedad'=>$propiedad
         ]);
     }
     public static function blog(Router $router){
         $router -> render('paginas/blog',[
-            'auth'=> false
+            
         ]);
     }
     public static function entradablog(Router $router){
         $router -> render('paginas/entradablog',[
-            'auth'=> false
+            
         ]);
     }
     public static function contacto(Router $router){
@@ -120,7 +119,7 @@ class PaginasController{
 
         }
         $router -> render('paginas/contacto',[
-            'auth'=> false,
+            
             'mensaje'=>$mensaje
 
         ]);
