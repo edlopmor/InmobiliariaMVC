@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '727c9df77426333500735a515ec1521c26264d8c',
+        'reference' => '28f91e0f7a9d0c6eca58101dfff1c3d677544081',
         'name' => 'edlop/inmobiliaria',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '727c9df77426333500735a515ec1521c26264d8c',
+            'reference' => '28f91e0f7a9d0c6eca58101dfff1c3d677544081',
             'dev_requirement' => false,
         ),
         'guzzlehttp/psr7' => array(
@@ -35,6 +35,15 @@
             'install_path' => __DIR__ . '/../intervention/image',
             'aliases' => array(),
             'reference' => '9a8cc99d30415ec0b3f7649e1647d03a55698545',
+            'dev_requirement' => false,
+        ),
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'v6.5.1',
+            'version' => '6.5.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
+            'reference' => 'dd803df5ad7492e1b40637f7ebd258fee5ca7355',
             'dev_requirement' => false,
         ),
         'psr/http-factory' => array(
