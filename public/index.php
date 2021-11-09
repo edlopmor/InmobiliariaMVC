@@ -2,12 +2,13 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Controllers\PaginasController;
 use MVC\Router;
 use Controllers\PropiedadController;
 use Controllers\VendedorController;
-
+use Controllers\PaginasControllers;
 $router = new Router();
-
+ //Zona privada
  $router->get('/admin', [PropiedadController::class, 'index']);
 
  $router->get('/propiedades/crear', [PropiedadController::class, 'crear']);
@@ -25,6 +26,15 @@ $router = new Router();
  $router->post('/vendedores/actualizar',[VendedorController::class,'actualizar']);
 
  $router->post('/vendedores/eliminar',[VendedorController::class,'eliminar']);
+ //Zona publica
+ $router->get('/',[PaginasController::class,'index']);
+ $router->get('/nosotros',[PaginasController::class,'nosotros']);
+ $router->get('/propiedades',[PaginasController::class,'propiedades']);
+ $router->get('/propiedad',[PaginasController::class,'propiedad']);
+ $router->get('/blog',[PaginasController::class,'blog']);
+ $router->get('/entradablog',[PaginasController::class,'entradablog']);
+ $router->get('/contacto',[PaginasController::class,'contacto']);
+ $router->post('/contacto',[PaginasController::class,'contacto']);
  
 
 $router->comprobarRutas();
