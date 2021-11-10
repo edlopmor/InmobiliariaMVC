@@ -1,6 +1,6 @@
 <main>
     <section class="seccion contenedor">
-        <h2>Casas y apartamentos en venta</h2>
+        <h2 data-cy="heading-propiedades">Casas y apartamentos en venta</h2>
             <?php 
                 include 'listado.php';
             ?>

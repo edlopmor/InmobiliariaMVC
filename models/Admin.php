@@ -16,8 +16,8 @@ class Admin extends ActiveRecord{
     }
     public function validar()
     {
-        if(!$this->email) self::$errores [] = "Debes escribir el email ";            
-        if(!$this->password) self::$errores [] = "Debes escribir la password ";
+        if(!$this->email) self::$errores [] = "Debes escribir el email";            
+        if(!$this->password) self::$errores [] = "Debes escribir la password";
 
         return self::$errores;
     }

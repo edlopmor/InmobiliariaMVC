@@ -1,6 +1,5 @@
 <main class="conteneder seccion">
-        <h1>Administrador de bienes raices</h1>
-        <?php
+        <h1 data-cy="heading-admin">Administrador inmbobiliaria</h1><?php
         if($resultado ?? null){
             $mensaje = mostrarNotificacion( intval( $resultado) );
             if($mensaje){ ?>

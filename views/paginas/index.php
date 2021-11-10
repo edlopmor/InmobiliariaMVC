@@ -1,27 +1,27 @@
 <main class="contenedor seccion">
-    <h1>Mas sobre nosotros</h1>
+    <h2 data-cy="heading-nosotros">Mas sobre nosotros</h2>
     <?php include 'iconos.php'; ?>
 </main>
     <section class="seccion contenedor">
-        <h2>Casas y apartamentos en venta</h2>
+        <h2 data-cy="heading-propiedades">Casas y apartamentos en venta</h2>
         <?php
             //Creamos una variable para mostrar el limite de propiedades que queremos ver. 
             $limiteVisible = 3;  
             include 'listado.php';
         ?>  
         <div class="alinear-derecha">
-            <a href="/propiedades" class="boton-verde">Ver todas</a>
+            <a data-cy="todas-propiedades" href="/propiedades" class="boton-verde">Ver todas</a>
         </div>
     </section>
 
-    <section class="imagen-contacto">
+    <section data-cy="imagen-contacto" class="imagen-contacto">
         <h2>Encuentra la casa de tus sueños</h2>
         <p>Rellena el formulario de contacto y un asesor se pondra en contacto contigo</p>
-        <a href="contacto.php" class="boton-amarillo">Contáctanos</a>        
+        <a href="/contacto" class="boton-amarillo">Contáctanos</a>        
     </section>
 
     <div class="contenedor seccion seccion-inferior">
-        <section class="blog">
+        <section data-cy="blog" class="blog">
             <h3>Nuestro blog</h3> 
             <article class= "entrada-blog">
                 <div class="imagen">
@@ -56,7 +56,7 @@
                 </div>
             </article>                 
         </section>
-        <section class="testimoniales">
+        <section data-cy="testimoniales" class="testimoniales">
             <h3>Testimoniales</h3>
             <div class="testimonial">
                 <blockquote>

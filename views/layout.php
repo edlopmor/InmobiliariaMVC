@@ -2,10 +2,11 @@
 if (!isset($_SESSION)){
     session_start();
 }
-    $auth = $_SESSION['login'] ?? false;
+$auth = $_SESSION['login'] ?? false;
     if(!isset($inicio)){
-        $inicio = false;
-    }
+    $inicio = false;
+       
+}
 ?>    
 
 <!DOCTYPE html>
@@ -24,16 +25,16 @@ if (!isset($_SESSION)){
         <div class="contenedor contenido-header">
             <div class="barraNavegacion">
                 <a class="logo" href="/">
-                    <img src="/build/img/logo.svg" alt="LogotipoPrincipal">
+                    <img data-cy="img-logo" src="/build/img/logo.svg" alt="LogotipoPrincipal">
                 </a>
                 <div class="mobile-menu">
                     <img src="/build/img/barras.svg" alt="icono menu responsive">
                 </div>
                 <div class="derecha">
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Boton dark-mode">
-                    <nav class="navegacion">
+                    <nav data-cy="navegacion-header" class="navegacion">
                         <a href="/nosotros">Nosotros</a>
-                        <a href="/propiedades">Anuncios</a>
+                        <a href="/propiedades">Propiedades</a>
                         <a href="/blog">Blog</a>
                         <a href="/contacto">Contacto</a>
                         <?php if($auth): ?>
@@ -42,25 +43,25 @@ if (!isset($_SESSION)){
                     </nav>
                 </div>       
             </div><!-- Fin BarraNavegacion-->
-            <!-- <?php 
-                // if ($inicio){
-                //     echo "<h1>Venta de casas y apartamentos de lujo</h1>";
-                // }
-            ?> -->
+             <?php 
+                 if ($inicio){
+                     echo "<h1 data-cy='heading-sitio'>Venta de casas y apartamentos de lujo</h1>";
+                }
+            ?> 
         </div>
     </header>
     <?php echo $contenido ; ?>
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
+            <nav data-cy="navegacion-footer" class="navegacion">
             <a href="/nosotros">Nosotros</a>
-            <a href="/anuncios">Anuncios</a>
+            <a href="/propiedades">Propiedades</a>
             <a href="/blog">Blog</a>
             <a href="/contacto">Contacto</a>
         </nav>
         <!--Capturar el año del servidor-->
        </div>
-        <p class="copyRight">Todos los derechos reservados <?php echo date('Y') ?> &copy;</p>
+        <p data-cy="copyright" class="copyRight">Todos los derechos reservados <?php echo date('Y') ?> &copy;</p>
     </footer>
     <script src ="/build/js/bundle.min.js"></script> 
 </body>
